@@ -9,7 +9,7 @@ const userRouter = require('./routes/routeUser');
 
 
 app.get("/", (req, res) => {
-    return res.status(200).send("Hai bebeb");
+    return res.status(200).send("Hai andi ganteng");
   });
 
 app.use(express.json())
