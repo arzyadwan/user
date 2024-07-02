@@ -4,7 +4,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'asia-southeast2-docker.pkg.dev/skripsi-423702/paddycure/user:$COMMIT_SHA']
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['run', 'deploy', 'berita', '--image', 'asia-southeast2-docker.pkg.dev/skripsi-423702/paddycure/user:$COMMIT_SHA', '--region', 'asia-southeast2']
+    args: ['run', 'deploy', 'user', '--image', 'asia-southeast2-docker.pkg.dev/skripsi-423702/paddycure/user:$COMMIT_SHA', '--region', 'asia-southeast2']
 images:
   - 'asia-southeast2-docker.pkg.dev/skripsi-423702/paddycure/user:$COMMIT_SHA'
 options:
