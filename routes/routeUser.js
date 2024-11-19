@@ -138,7 +138,7 @@ const storage = new Storage({
   });
   
 
-router.get("/",verifikasiUser,(req,res)=>{
+router.get("/",(req,res)=>{
   const query = `SELECT id, nama, img, role, timestamp, nomer_hp, username FROM user;`
 
   db.query(query, (err,result)=>{
