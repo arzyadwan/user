@@ -1,4 +1,4 @@
-const mysql = require("mysql");
+const mysql = require("mysql2");
 //konfig koneksi ke db
 const dbConfig = {
     host: "34.101.98.164",
