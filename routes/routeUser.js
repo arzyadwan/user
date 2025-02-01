@@ -16,7 +16,7 @@ const storage = new Storage({
 
 
 
-  router.post("/register",multer().any(),(req,res)=>{
+  router.post("/register", (req,res)=>{
 
     if(req.body.username == undefined || req.body.username == '' || req.body.password == undefined || req.body.password == ""){
         res.status(200).json({
@@ -30,7 +30,7 @@ const storage = new Storage({
     const users = {
       id : numbers(10),
       name : req.body.nama,
-      img : req.files[0],
+      img : req.body.img,
       role : req.body.role,
       nomorHP : req.body.nomorHP,
       username : req.body.username,
