@@ -160,7 +160,7 @@ router.get("/",(req,res)=>{
 })
 
 
-router.put("/ubah",verifikasiUser,multer().any(),(req,res) => {
+router.put("/ubah",/*verifikasiUser,*/multer().any(),(req,res) => {
     if(req.body.username == undefined || req.body.username == '' || req.body.password == undefined || req.body.password == ""){
         res.status(200).json({
             result : false,
@@ -171,7 +171,7 @@ router.put("/ubah",verifikasiUser,multer().any(),(req,res) => {
   const user = {
     id : req.body.id,
     name : req.body.nama,
-    img : req.files[0],
+    img : req.body.img,
     role : req.body.role,
     nomor_hp : req.body.nomor_hp,
     username : req.body.username,
@@ -446,7 +446,7 @@ router.put("/ubah",verifikasiUser,multer().any(),(req,res) => {
   
 
 
-router.delete("/delete/:id",verifikasiUser, (req, res) => {
+router.delete("/delete/:id",/*verifikasiUser,*/ (req, res) => {
     const id = req.params.id;
   
     // Inisialisasi Google Cloud Storage
@@ -536,7 +536,7 @@ router.delete("/delete/:id",verifikasiUser, (req, res) => {
   
 
 
-router.get("/userDetail/:id",verifikasiUser,  (req, res) => {
+router.get("/userDetail/:id",/*verifikasiUser,*/  (req, res) => {
   const userId = req.params.id;
 
   db.query(
